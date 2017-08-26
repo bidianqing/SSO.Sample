@@ -1,0 +1,14 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+@if (Request.IsAuthenticated)
+{
+    <a>@User.Identity.Name</a><a href="@Url.Action("LogOff")"> 注销</a>
+}
+else
+{
+    <a href="http://passport.domain.dev?return=http://domain.dev" class="btn btn-default">登录</a>
+}
+
